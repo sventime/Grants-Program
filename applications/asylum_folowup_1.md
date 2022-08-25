@@ -337,18 +337,30 @@ Build of the 2d testing game with integration with Asylum node. Delivered within
 - **Estimated Duration:** 2 weeks
 - **FTE:** 3
 - **Costs:** 19,200 USD
-
 | Number | Deliverable               | Specification                                                                                                                                                                                                 |
 | ------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0a.    | License                   | MIT                                                                                                                                                                                                           |
 | 0b.    | Documentation             | Improve documentation for Unity SDK, describe new features with managing 3D items and items drop                                                                                                              |
-| 0c.    | Testing Guide             | Guide though the interoperability game mechanics between two games                                                                                                                                            |
-| 0d.    | Docker                    | Current Docker setup doesn’t require additional changes                                                                                                                                                       |
+| 0c.    | Testing Guide             | Guide through the interoperability of game mechanics between two games and association of Blueprints with in-game items, specified by Game Client                                                                                                                                            |
+| 0d.    | Docker                    | Current Docker setup doesn't require additional changes                                                                                                                                                       |
 | 0e.    | Article                   | -                                                                                                                                                                                                             |
-| 1.     | Unity SDK updates         | We’ll expand Unity SDK to make it more abstract and reusable between Unity projects, as well as introduce new features:<br/>1. Ability to manage 3D assets<br/>2. Items drop system                           |
-| 2.     | 3D Game                   | We’ll develop 3D game, which operates 3D NFT representation and implement game mechanics, which will become the reference on items interoperability                                                           |
-| 3.     | In-game items association | We’ll improve Game Developers Console and introduce possibility to define in-game items on the level of Game Client (so-called Patterns) and mechanism to associate these in-game patterns with NFT Templates |
-
+| 1.     | Unity SDK updates         |                                                                                                                                                                              |
+| 1a.    | Unity SDK updates         | Implement the ability to use Unity SDK in Standalone mode (without React build). We're going to utilize Ajuna Unity SubstrateClient and integrate it with Asylum pallets.                         |
+| 1b.    | Unity SDK updates         | Implement Unity Editor Extension to operate with Asylum pallet in Editor mode. This will be the first iteration of the editor extension, where a developer can specify the seed phase, connect to the Asylum pallet, query Asylum entities, and mint Asylum Items. |
+| 1c.    | Unity SDK updates         | Refactor Unity SDK to support both use cases: inside React app and Standalone mode. |
+| 1d.    | Unity SDK updates         | Implement UML Class diagram of Unity SDK high-level classes |
+| 1e.    | Unity SDK updates         | Implement asynchronous assets loading to reduce lags during the game |
+| 1f.    | Unity SDK updates         | Improve Unity SDK example documentation: show two possible usages of the plugin (inside React and Standalone mode), a guide on editor extension usage |
+| 2.     | 3D Game                   |                                                    |
+| 2a.    | 3D Game                   | Implement a 3D Diablo-like game in Unity 3D, which utilizes Unity SDK                                                   |
+| 2b.    | 3D Game                   | Implement the ability to parse and render GLB/GLTF 3D models                                                  |
+| 2c.    | 3D Game                   | Implement the ability to render 3D animation and effects based on Tags and Interpretations                                                 |
+| 2d.    | 3D Game                   | Implement in-game Items drop logic with on-chain minting. There will be scripted in-game actions (e.g. open a chest, defeat an NPC), which triggers the on-chain minting of Item and handles its result                                                   |
+| 3.     | In-game items association | This Deliverable is related to the Creators Studio web app |
+| 3a.    | In-game items association | Implement the ability to create Blueprint with specific Interpretations required by Game Client to associate it with in-game item |
+| 3b.    | In-game items association | Implement the ability to adapt existing Blueprint and add missing Interpretations, required by Game Client to associate it with in-game item |
+| 3c.    | In-game items association | Implement a 3D model viewer to check uploaded 3D Interpretations |
+| 4.     | Renamings                 | According to the latest comments and product design discussions, we are making the following renamings: Template -> Blueprint, Game -> Space, Game Developers Console -> Creators Studio |
 #### Milestone 4 — Public availability
 
 - **Estimated Duration:** 2 weeks
